@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Empezamos con estilos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+
+    <form action="#" method="get">
+        <!-- ==================== DATOS PERSONALES ==================== -->
+
+        <!-- Campo texto: nombre completo -->
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+        <br><br>
+        <!-- Explicación: input tipo texto para capturar el nombre real del usuario -->
+
+        <!-- Campo texto: apellidos (puede ser útil separado) -->
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Ej: Pérez Gómez">
+        <br><br>
+        <!-- Explicación: segundo campo de texto para los apellidos -->
+
+        <!-- Campo email: dirección de correo -->
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="usuario@ejemplo.com" required>
+        <br><br>
+        <!-- Explicación: input tipo email valida formato básico de correo -->
+
+        <!-- Campo teléfono: número de contacto -->
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
+        <br><br>
+        <!-- Explicación: input tipo tel para números de teléfono (no valida formato estricto sin JS) -->
+
+        <!-- Campo fecha de nacimiento -->
+        <label for="fecha_nac">Fecha de nacimiento:</label>
+        <input type="date" id="fecha_nac" name="fecha_nac">
+        <br><br>
+        <!-- Explicación: input tipo date muestra un selector de fecha nativo -->
+
+        <!-- Campo DNI / NIF -->
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" placeholder="12345678A" pattern="[0-9]{8}[A-Za-z]">
+        <br><br>
+        <!-- Explicación: campo texto con patrón simple para formato DNI español -->
+
+        <!-- ==================== DATOS DE ACCESO ==================== -->
+
+        <!-- Nombre de usuario -->
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username" placeholder="usuario123" required>
+        <br><br>
+        <!-- Explicación: identificador único para login -->
+
+        <!-- Contraseña -->
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <!-- Explicación: input tipo password oculta los caracteres -->
+
+        <!-- Confirmar contraseña -->
+        <label for="confirm_password">Confirmar contraseña:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+        <br><br>
+        <!-- Explicación: segundo campo password para verificar coincidencia -->
+
+        <!-- ==================== DIRECCIÓN DE ENVÍO ==================== -->
+
+        <!-- Dirección línea 1 -->
+        <label for="direccion">Dirección (calle y número):</label>
+        <input type="text" id="direccion" name="direccion" placeholder="C/ Ejemplo 123">
+        <br><br>
+        <!-- Explicación: texto libre para la dirección principal -->
+
+        <!-- Dirección línea 2 (adicional) -->
+        <label for="direccion2">Dirección línea 2 (piso, puerta, etc.):</label>
+        <input type="text" id="direccion2" name="direccion2" placeholder="Bloque 2, 3º A">
+        <br><br>
+        <!-- Explicación: campo opcional para complemento de dirección -->
+
+        <!-- Ciudad -->
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad" placeholder="Madrid">
+        <br><br>
+        <!-- Explicación: campo texto para la ciudad -->
+
+        <!-- Provincia / Estado -->
+        <label for="provincia">Provincia:</label>
+        <input type="text" id="provincia" name="provincia" placeholder="Madrid">
+        <br><br>
+        <!-- Explicación: provincia o estado según país -->
+
+        <!-- Código postal -->
+        <label for="cp">Código postal:</label>
+        <input type="text" id="cp" name="cp" placeholder="28001" pattern="[0-9]{5}">
+        <br><br>
+        <!-- Explicación: campo con patrón de 5 dígitos numéricos -->
+
+        <!-- País (lista desplegable) -->
+        <label for="pais">País:</label>
+        <select id="pais" name="pais">
+            <option value="ES">España</option>
+            <option value="MX">México</option>
+            <option value="AR">Argentina</option>
+            <option value="CO">Colombia</option>
+            <option value="US">Estados Unidos</option>
+            
+        </select>
+        <br><br>
+        <!-- Explicación: menú desplegable para seleccionar país -->
+
+        <!-- ==================== INFORMACIÓN ADICIONAL / PREFERENCIAS ==================== -->
+
+        <!-- Checkbox: suscripción newsletter -->
+        <input type="checkbox" id="newsletter" name="newsletter" value="si">
+        <label for="newsletter">Deseo recibir ofertas y novedades por email</label>
+        <br><br>
+        <!-- Explicación: checkbox para opt-in de marketing -->
+
+        <!-- Checkbox: aceptar términos (obligatorio) -->
+        <input type="checkbox" id="terminos" name="terminos" required>
+        <label for="terminos">Acepto los términos y condiciones del servicio</label>
+        <br><br>
+        <!-- Explicación: checkbox con required para obligar aceptación -->
+
+        <!-- Radio: tipo de cliente -->
+        <span>Tipo de cliente:</span><br>
+        <input type="radio" id="particular" name="tipo_cliente" value="particular" checked>
+        <label for="particular">Particular</label>
+        <input type="radio" id="empresa" name="tipo_cliente" value="empresa">
+        <label for="empresa">Empresa</label>
+        <br><br>
+        <!-- Explicación: botones radio para elegir entre dos opciones mutuamente excluyentes -->
+
+        <!-- Selector de preferencia de contacto -->
+        <label for="contacto_pref">Preferencia de contacto:</label>
+        <select id="contacto_pref" name="contacto_pref">
+            <option value="email">Correo electrónico</option>
+            <option value="telefono">Teléfono</option>
+            <option value="whatsapp">WhatsApp</option>
+            <option value="sms">SMS</option>
+        </select>
+        <br><br>
+        <!-- Explicación: otro desplegable para método de contacto preferido -->
+
+        <!-- Campo número (edad) -->
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="18" max="200" step="1" value="18">
+        <br><br>
+        <!-- Explicación: input numérico con mínimo y máximo -->
+
+        <!-- Campo rango (por ejemplo, nivel de interés) -->
+        <label for="interes">Nivel de interés en ofertas (0 a 10):</label>
+        <input type="range" id="interes" name="interes" min="0" max="10" step="1" value="5">
+        <br><br>
+        <!-- Explicación: control deslizante para seleccionar valor en rango -->
+
+        <!-- Campo color (podría ser para tema de la cuenta) -->
+        <label for="color_fav">Color favorito (personalización):</label>
+        <input type="color" id="color_fav" name="color_fav" value="#3498db">
+        <br><br>
+        <!-- Explicación: selector de color nativo del navegador -->
+
+        <!-- Campo URL (web personal o empresa) -->
+        <label for="web">Sitio web (opcional):</label>
+        <input type="url" id="web" name="web" placeholder="https://ejemplo.com">
+        <br><br>
+        <!-- Explicación: input tipo url valida formato de dirección web -->
+
+        <!-- Campo archivo (subir avatar o documento) -->
+        <label for="avatar">Foto de perfil (avatar):</label>
+        <input type="file" id="avatar" name="avatar" accept="image/*">
+        <br><br>
+        <!-- Explicación: permite subir archivos, limitado a imágenes por accept -->
+
+        <!-- Campo oculto (para enviar datos técnicos, ej: timestamp) -->
+        <input type="hidden" name="formulario_id" value="REG_ECOMM_001">
+        <!-- Explicación: input oculto que no ve el usuario, útil para pasar valores fijos -->
+
+        <!-- Campo fecha y hora local -->
+        <label for="fecha_hora">Fecha y hora preferida para entrega:</label>
+        <input type="datetime-local" id="fecha_hora" name="fecha_hora">
+        <br><br>
+        <!-- Explicación: selector combinado de fecha y hora local -->
+
+        <!-- Campo mes -->
+        <label for="mes_nacimiento">Mes de nacimiento (solo mes/año):</label>
+        <input type="month" id="mes_nacimiento" name="mes_nacimiento">
+        <br><br>
+        <!-- Explicación: input tipo month captura mes y año -->
+
+        <!-- Campo semana -->
+        <label for="semana">Semana del año para envío especial:</label>
+        <input type="week" id="semana" name="semana">
+        <br><br>
+        <!-- Explicación: input tipo week captura número de semana -->
+
+        <!-- Campo hora -->
+        <label for="hora_contacto">Hora preferida de contacto:</label>
+        <input type="time" id="hora_contacto" name="hora_contacto">
+        <br><br>
+        <!-- Explicación: input tipo time para hora sin fecha -->
+
+        <!-- Campo de búsqueda (puede ser para referencias) -->
+        <label for="codigo_promo">Código de promoción (si tienes):</label>
+        <input type="search" id="codigo_promo" name="codigo_promo" placeholder="Ej: DESCUENTO20">
+        <br><br>
+        <!-- Explicación: input tipo search, similar a texto pero con semántica de búsqueda -->
+
+        <!-- Área de texto (comentarios adicionales) -->
+        <label for="comentarios">Comentarios o instrucciones especiales:</label>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="40" placeholder="Indica cualquier detalle adicional..."></textarea>
+        <br><br>
+        <!-- Explicación: área de texto multilínea para mensajes largos -->
+
+        <!-- Lista de datos predefinida (datalist) para autocompletar ciudad sugerida -->
+        <label for="ciudad_sugerida">Ciudad (autocompletado):</label>
+        <input type="text" id="ciudad_sugerida" name="ciudad_sugerida" list="ciudades">
+        <datalist id="ciudades">
+            <option value="Madrid">
+            <option value="Barcelona">
+            <option value="Valencia">
+            <option value="Sevilla">
+            <option value="Bilbao">
+        </datalist>
+        <br><br>
+        <!-- Explicación: datalist provee sugerencias mientras escribe el usuario -->
+
+        <!-- Campo con patrón para código interno (ej: código de cliente) -->
+        <label for="codigo_cliente">Código de cliente (opcional):</label>
+        <input type="text" id="codigo_cliente" name="codigo_cliente" placeholder="CLI-0000" pattern="CLI-[0-9]{4}">
+        <br><br>
+        <!-- Explicación: patrón que exige formato CLI- seguido de 4 dígitos -->
+
+        <!-- Botones de acción -->
+        <button type="submit">Registrarse</button>
+        <button type="reset">Limpiar formulario</button>
+        <!-- Explicación: botón submit envía el formulario, reset limpia todos los campos -->
+
+    </form>
+    <!-- Comentario final: este formulario incluye casi todos los tipos de input HTML5 posibles para registro en ecommerce -->
+</body>
+</html>
+```
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Ecommerce - CSS Externo (Caso 3)</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- ============================================================ -->
+    <!-- CASO 3: CSS EXTERNO (RECOMENDADO)                           
+    /*                                                                
+       Según tu cuadro:                                              
+       "CSS Externo (Recomendado): Se crea un archivo .css           
+       independiente y se enlaza en la sección <head> con la         
+       etiqueta <link>."                                             
+                                                                     
+       Ventajas:                                                     
+       ✅ Código más limpio y organizado                             
+       ✅ Mismo CSS reutilizable en múltiples páginas                
+       ✅ El navegador guarda en caché el archivo .css               
+       ✅ Mejor mantenimiento y escalabilidad                        
+       ✅ Forma profesional y estándar en la industria               
+    */                                                               -->
+    <!-- ============================================================ 
+    <link rel="stylesheet" href="estilos.css">
+   -->
+    
+</head>
+<body>
+
+    <h1>🛍️ Formulario de Registro - Ecommerce</h1>
+    <p class="subtitulo">✨ Caso 3: CSS Externo (archivo estilos.css separado) ✨</p>
+    
+    <form action="#" method="post">
+        
+        <!-- ========== SECCIÓN 1: DATOS PERSONALES ========== -->
+        <div class="seccion">
+            <h3>👤 Datos Personales</h3>
+            
+            <!-- Campo texto: nombre completo -->
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+            <br>
+            <!-- Explicación: input tipo texto para capturar el nombre real del usuario -->
+
+            <!-- Campo texto: apellidos -->
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Ej: Pérez Gómez">
+            <br>
+            <!-- Explicación: segundo campo de texto para los apellidos -->
+
+            <!-- Campo email -->
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="usuario@ejemplo.com" required>
+            <br>
+            <!-- Explicación: input tipo email valida formato básico de correo -->
+
+            <!-- Campo teléfono -->
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
+            <br>
+            <!-- Explicación: input tipo tel para números de teléfono -->
+
+            <!-- Campo fecha de nacimiento -->
+            <label for="fecha_nac">Fecha de nacimiento:</label>
+            <input type="date" id="fecha_nac" name="fecha_nac">
+            <br>
+            <!-- Explicación: input tipo date muestra un selector de fecha nativo -->
+
+            <!-- Campo DNI / NIF con patrón -->
+            <label for="dni">DNI / NIF:</label>
+            <input type="text" id="dni" name="dni" placeholder="12345678A" pattern="[0-9]{8}[A-Za-z]">
+            <br>
+            <!-- Explicación: campo texto con patrón simple para formato DNI español -->
+        </div>
+
+        <!-- ========== SECCIÓN 2: DATOS DE ACCESO ========== -->
+        <div class="seccion">
+            <h3>🔐 Datos de Acceso</h3>
+            
+            <!-- Nombre de usuario -->
+            <label for="username">Nombre de usuario:</label>
+            <input type="text" id="username" name="username" placeholder="usuario123" required>
+            <br>
+            <!-- Explicación: identificador único para login -->
+
+            <!-- Contraseña -->
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <!-- Explicación: input tipo password oculta los caracteres -->
+
+            <!-- Confirmar contraseña -->
+            <label for="confirm_password">Confirmar contraseña:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+            <br>
+            <!-- Explicación: segundo campo password para verificar coincidencia -->
+        </div>
+
+        <!-- ========== SECCIÓN 3: DIRECCIÓN DE ENVÍO ========== -->
+        <div class="seccion">
+            <h3>📍 Dirección de Envío</h3>
+            
+            <!-- Dirección línea 1 -->
+            <label for="direccion">Dirección (calle y número):</label>
+            <input type="text" id="direccion" name="direccion" placeholder="C/ Ejemplo 123">
+            <br>
+            <!-- Explicación: texto libre para la dirección principal -->
+
+            <!-- Dirección línea 2 (adicional) -->
+            <label for="direccion2">Dirección línea 2:</label>
+            <input type="text" id="direccion2" name="direccion2" placeholder="Bloque 2, 3º A">
+            <br>
+            <!-- Explicación: campo opcional para complemento de dirección -->
+
+            <!-- Ciudad -->
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Madrid">
+            <br>
+            <!-- Explicación: campo texto para la ciudad -->
+
+            <!-- Provincia / Estado -->
+            <label for="provincia">Provincia / Estado:</label>
+            <input type="text" id="provincia" name="provincia" placeholder="Madrid">
+            <br>
+            <!-- Explicación: provincia o estado según país -->
+
+            <!-- Código postal con patrón -->
+            <label for="cp">Código postal:</label>
+            <input type="text" id="cp" name="cp" placeholder="28001" pattern="[0-9]{5}">
+            <br>
+            <!-- Explicación: campo con patrón de 5 dígitos numéricos -->
+
+            <!-- País (lista desplegable) -->
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="ES">España</option>
+                <option value="MX">México</option>
+                <option value="AR">Argentina</option>
+                <option value="CO">Colombia</option>
+                <option value="US">Estados Unidos</option>
+            </select>
+            <br>
+            <!-- Explicación: menú desplegable para seleccionar país -->
+        </div>
+
+        <!-- ========== SECCIÓN 4: INFORMACIÓN ADICIONAL ========== -->
+        <div class="seccion">
+            <h3>⚙️ Preferencias y Configuración</h3>
+            
+            <!-- Checkbox: suscripción newsletter -->
+            <input type="checkbox" id="newsletter" name="newsletter" value="si">
+            <label for="newsletter">Deseo recibir ofertas y novedades por email</label>
+            <br>
+            <!-- Explicación: checkbox para opt-in de marketing -->
+
+            <!-- Checkbox: aceptar términos (obligatorio) -->
+            <input type="checkbox" id="terminos" name="terminos" required>
+            <label for="terminos">Acepto los términos y condiciones del servicio</label>
+            <br>
+            <!-- Explicación: checkbox con required para obligar aceptación -->
+
+            <!-- Radio: tipo de cliente -->
+            <span class="label-texto">Tipo de cliente:</span>
+            <div class="radio-group">
+                <input type="radio" id="particular" name="tipo_cliente" value="particular" checked>
+                <label for="particular">Particular</label>
+                <input type="radio" id="empresa" name="tipo_cliente" value="empresa">
+                <label for="empresa">Empresa</label>
+            </div>
+            <br>
+            <!-- Explicación: botones radio para elegir entre dos opciones mutuamente excluyentes -->
+
+            <!-- Selector de preferencia de contacto -->
+            <label for="contacto_pref">Preferencia de contacto:</label>
+            <select id="contacto_pref" name="contacto_pref">
+                <option value="email">Correo electrónico</option>
+                <option value="telefono">Teléfono</option>
+                <option value="whatsapp">WhatsApp</option>
+                <option value="sms">SMS</option>
+            </select>
+            <br>
+            <!-- Explicación: desplegable para método de contacto preferido -->
+
+            <!-- Campo número (edad) -->
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="18" max="120" step="1" value="18">
+            <br>
+            <!-- Explicación: input numérico con mínimo y máximo -->
+
+            <!-- Campo rango (nivel de interés) -->
+            <label for="interes">Nivel de interés en ofertas:</label>
+            <input type="range" id="interes" name="interes" min="0" max="10" step="1" value="5">
+            <span class="valor-rango">5/10</span>
+            <br>
+            <!-- Explicación: control deslizante para seleccionar valor en rango -->
+
+            <!-- Campo color (personalización) -->
+            <label for="color_fav">Color favorito:</label>
+            <input type="color" id="color_fav" name="color_fav" value="#3498db">
+            <br>
+            <!-- Explicación: selector de color nativo del navegador -->
+
+            <!-- Campo URL -->
+            <label for="web">Sitio web (opcional):</label>
+            <input type="url" id="web" name="web" placeholder="https://ejemplo.com">
+            <br>
+            <!-- Explicación: input tipo url valida formato de dirección web -->
+
+            <!-- Campo archivo (avatar) -->
+            <label for="avatar">Foto de perfil (avatar):</label>
+            <input type="file" id="avatar" name="avatar" accept="image/*">
+            <br>
+            <!-- Explicación: permite subir archivos, limitado a imágenes por accept -->
+
+            <!-- Campo oculto (para enviar datos técnicos) -->
+            <input type="hidden" name="formulario_id" value="REG_ECOMM_001">
+            <!-- Explicación: input oculto que no ve el usuario -->
+
+            <!-- Campo fecha y hora local -->
+            <label for="fecha_hora">Fecha y hora para entrega:</label>
+            <input type="datetime-local" id="fecha_hora" name="fecha_hora">
+            <br>
+            <!-- Explicación: selector combinado de fecha y hora local -->
+
+            <!-- Campo mes -->
+            <label for="mes_nacimiento">Mes de nacimiento:</label>
+            <input type="month" id="mes_nacimiento" name="mes_nacimiento">
+            <br>
+            <!-- Explicación: input tipo month captura mes y año -->
+
+            <!-- Campo semana -->
+            <label for="semana">Semana del año para envío:</label>
+            <input type="week" id="semana" name="semana">
+            <br>
+            <!-- Explicación: input tipo week captura número de semana -->
+
+            <!-- Campo hora -->
+            <label for="hora_contacto">Hora preferida de contacto:</label>
+            <input type="time" id="hora_contacto" name="hora_contacto">
+            <br>
+            <!-- Explicación: input tipo time para hora sin fecha -->
+
+            <!-- Campo de búsqueda (código promocional) -->
+            <label for="codigo_promo">Código de promoción:</label>
+            <input type="search" id="codigo_promo" name="codigo_promo" placeholder="Ej: DESCUENTO20">
+            <br>
+            <!-- Explicación: input tipo search, similar a texto pero con semántica de búsqueda -->
+
+            <!-- Área de texto (comentarios) -->
+            <label for="comentarios">Comentarios o instrucciones:</label>
+            <textarea id="comentarios" name="comentarios" rows="3" cols="40" placeholder="Indica cualquier detalle adicional..."></textarea>
+            <br>
+            <!-- Explicación: área de texto multilínea para mensajes largos -->
+
+            <!-- Datalist para autocompletar ciudad -->
+            <label for="ciudad_sugerida">Ciudad (autocompletado):</label>
+            <input type="text" id="ciudad_sugerida" name="ciudad_sugerida" list="ciudades">
+            <datalist id="ciudades">
+                <option value="Madrid">
+                <option value="Barcelona">
+                <option value="Valencia">
+                <option value="Sevilla">
+                <option value="Bilbao">
+                <option value="Zaragoza">
+                <option value="Málaga">
+            </datalist>
+            <br>
+            <!-- Explicación: datalist provee sugerencias mientras escribe el usuario -->
+
+            <!-- Campo con patrón específico -->
+            <label for="codigo_cliente">Código de cliente (opcional):</label>
+            <input type="text" id="codigo_cliente" name="codigo_cliente" placeholder="CLI-0000" pattern="CLI-[0-9]{4}">
+            <br>
+            <!-- Explicación: patrón que exige formato CLI- seguido de 4 dígitos -->
+        </div>
+
+        <hr>
+
+        <!-- Botones de acción -->
+        <button type="submit">✅ Registrarse</button>
+        <button type="reset">🗑️ Limpiar formulario</button>
+        <!-- Explicación: botón submit envía el formulario, reset limpia todos los campos -->
+
+    </form>
+
+    <footer>
+        <p>📌 <strong>Caso 3: CSS Externo (Recomendado)</strong> - Los estilos están en el archivo <code>estilos.css</code></p>
+        <p>🔗 Enlazado mediante <code>&lt;link rel="stylesheet" href="estilos.css"&gt;</code> en la sección <code>&lt;head&gt;</code></p>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- COMENTARIO FINAL SOBRE EL CASO 3                             
+    /*                                                                
+       Este documento utiliza CASO 3: CSS EXTERNO (RECOMENDADO)      
+                                                                     
+       Según tu cuadro original:                                     
+       "CSS Externo (Recomendado): Se crea un archivo .css           
+       independiente y se enlaza en la sección <head> con la         
+       etiqueta <link>."                                             
+                                                                     
+       ✅ Ventajas de esta forma:                                    
+       - Separación total de contenido (HTML) y presentación (CSS)   
+       - El mismo CSS puede usarse en múltiples páginas              
+       - El navegador cachea el archivo .css para carga más rápida   
+       - Código más limpio, profesional y mantenible                 
+       - Forma estándar utilizada en todos los proyectos web         
+    */                                                               -->
+   
+</body>
+</html>
